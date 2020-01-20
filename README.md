@@ -16,36 +16,34 @@ And then go to http://localhost:9000 to see the running web application.
 
 There are several demonstration files available in this template.
 
-- `HomeController.java`:
+- `ChatMessageController.java`:
 
   Shows how to handle simple HTTP requests.
 
-- `AsyncController.java`:
+- `LoginController.java`:
 
-  Shows how to do asynchronous programming when handling a request.
+  Shows how to do asynchronous programming when handling a login and register request.
 
-- `CountController.java`:
 
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
+## Models
 
-## Components
+Used to Create various forms .
 
-- `Module.java`:
+-'ChatMessage.scala.html'
 
-  Shows how to use Guice to bind all the components needed by your application.
+-'Loginform.scala.html'
 
-- `Counter.java`:
+-'RegisterForm.scala.html'
 
-  An example of a component that contains state, in this case a simple counter.
+-'MessageForm.scala.html'
 
-- `ApplicationTimer.java`:
+-'User.scala.html'
 
-  An example of a component that starts when the application starts and stops
-  when the application stops.
+ 
+## Services
 
-## Filters
+This is used to identify the users and identify the questions asked by the users in chatbot.
 
-- `ExampleFilter.java`:
+-'ChatMessageService.java'
 
-  A simple filter that adds a header to every response.
+-'LoginService.java'
