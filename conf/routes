@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET     /testing                    controllers.TestingController.testing
+
+GET     /loginform                  controllers.LoginController.preLogin
+POST    /login                      controllers.LoginController.login()
+
+GET     /registerform               controllers.LoginController.preRegister
+GET     /logout/:username           controllers.LoginController.logout(username: String)
+POST    /register                   controllers.LoginController.register()
+
+GET     /chat/:userName             controllers.ChatMessageController.showConversation(userName: String)
+GET     /getChat/:userName          controllers.ChatMessageController.getConversation(userName: String)
+
+POST     /chat/saveMessage/:userName             controllers.ChatMessageController.saveMessage(userName: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

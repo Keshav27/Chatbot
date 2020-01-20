@@ -1,0 +1,35 @@
+@(registerForm: Form[RegisterForm])
+@main("Register"){
+@helper.form(routes.LoginController.register()){
+
+<link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/abc.css")"/>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign Up </h2>
+
+        <form>
+            <input type="text" class="fadeIn second" name="username" placeholder="Name" value="@registerForm("username").value">
+            <input type="text" class="fadeIn third" name="password" placeholder="Password" value="@registerForm("password").value">
+            <input type="text" class="fadeIn third" name="confirmPassword" placeholder="Confirm Password" value="@registerForm("confirmPassword").value">
+            <input type="submit" class="fadeIn fourth">
+        </form>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}

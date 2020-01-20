@@ -1,0 +1,32 @@
+@(username: String, messageForm : Form[MessageForm])
+@main("ChatBot") {
+<head>
+    <title>Chat - Customer Module</title>
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/style.css")"/>
+</head>
+
+
+<script src="@routes.Assets.versioned("javascripts/jquery-3.2.1.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.versioned("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.versioned("javascripts/custom.js")" type="text/javascript"></script>
+
+
+<body>
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Welcome, <b>@username</b></p>
+        <p class="logout"><a id="exit" href="@controllers.routes.LoginController.logout(username)">Exit Chat</a></p>
+        <div style="clear:both"></div>
+    </div>
+
+    <div id="chatbox"></div>
+
+    @helper.form(action = routes.ChatMessageController.saveMessage(username), 'id->"messageSendForm") {
+        @helper.inputText(messageForm("message"),'class -> "form-control")
+    }
+
+    <button class="btn btn-primary" onclick="sendPostRequest('messageSendForm', '@username', 'chatbox')">Send</button>
+
+</div>
+</body>
+}

@@ -1,0 +1,5 @@
+@(chatMessages : List[ChatMessage])
+
+    @for(chatMessage <- chatMessages){
+        <div > <b>@chatMessage.getSenderName()</b>: @chatMessage.getMessage()<br></div>
+    }
