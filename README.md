@@ -1,4 +1,4 @@
-# play-java-starter-example
+# Chatbot
 
 This is a starter application that shows how Play works.  Please see the documentation at https://www.playframework.com/documentation/latest/Home for more details.
 
